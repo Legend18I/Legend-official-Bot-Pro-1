@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "name": "legend-official-bot",
+  "builds": [
+    {
+      "src": "index.html",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
+}
