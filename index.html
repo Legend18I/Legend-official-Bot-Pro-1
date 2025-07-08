@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Legend Official Bot</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Profile Section -->
+    <div class="profile-section">
+      <img src="profile.jpg" alt="Legend Trader" class="profile-img" />
+      <h1>Legend Official Bot</h1>
+    </div>
+
+    <!-- License Screen -->
+    <div id="license-screen" class="auth-section">
+      <h2>Enter License Key</h2>
+      <input type="password" id="license-input" placeholder="Enter License Key" />
+      <button onclick="checkLicense()">Unlock Bot</button>
+      <p id="license-error" class="error-text"></p>
+
+      <a href="https://wa.me/923251071294" target="_blank" class="social-link">
+        <img src="https://img.icons8.com/ios-filled/24/whatsapp.png" /> Contact on WhatsApp
+      </a>
+      <a href="https://www.tiktok.com/@legendtrader25" target="_blank" class="social-link">
+        <img src="https://img.icons8.com/ios-filled/24/tiktok--v1.png" /> Follow on TikTok (@Legendtrader25)
+      </a>
+    </div>
+
+    <!-- Bot Interface -->
+    <div id="bot-interface" style="display: none;">
+      <div class="dropdown-section">
+        <label for="currency">Select OTC Currency:</label>
+        <select id="currency">
+          <option>OTC EUR/USD</option>
+          <option>OTC GBP/USD</option>
+          <option>OTC USD/JPY</option>
+          <option>OTC EUR/JPY</option>
+          <option>OTC AUD/CAD</option>
+          <option>OTC NZD/USD</option>
+          <option>OTC EUR/GBP</option>
+          <option>OTC USD/CAD</option>
+          <option>OTC USD/CHF</option>
+          <option>OTC EUR/CHF</option>
+          <option>OTC GBP/JPY</option>
+          <option>OTC NZD/JPY</option>
+          <option>OTC AUD/JPY</option>
+          <option>OTC GBP/CHF</option>
+        </select>
+      </div>
+
+      <div class="dropdown-section">
+        <label for="timeframe">Select Timeframe:</label>
+        <select id="timeframe">
+          <option>5 sec</option>
+          <option>10 sec</option>
+          <option>15 sec</option>
+          <option>1 min</option>
+          <option>5 min</option>
+        </select>
+      </div>
+
+      <button onclick="getSignal()" class="get-signal-btn">GET SIGNAL</button>
+
+      <div id="analyzing" class="analyzing-text hidden">Analyzing chart...</div>
+      <div id="result" class="signal-result hidden"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
